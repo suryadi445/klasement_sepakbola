@@ -5,18 +5,19 @@
             <h5 class="text-center text-capitalize"><?= $musim ?></h5>
         </div>
     </div>
-    <div class="card-deck mt-3">
+    <div class="card-deck mt-3 mb-3">
         <div class="card">
             <div class="row mt-3">
                 <div class="col-md">
+                    <div style="background-image: url('../app_api/assets/image/italia.png');"></div>
                     <h6 class="text-center text-capitalize"><?= $italia ?></h6>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md">
-                    <table class="table text-center text-capitalize" style="font-size: 12px;">
+                    <table class="table text-center text-capitalize table-responsive">
                         <thead>
-                            <tr>
+                            <tr style="font-size: 11px;">
                                 <th scope="col">Position</th>
                                 <th scope="col">Team</th>
                                 <th scope="col">Play</th>
@@ -24,13 +25,17 @@
                                 <th scope="col">Lose</th>
                                 <th scope="col">Draw</th>
                                 <th scope="col">Points</th>
+                                <th scope="col">GD</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($klasement_italia as $posisi) : ?>
-                                <tr>
-                                    <th scope="row"><?= $posisi['stats'][8]['value'] ?></th>
-                                    <td>
+                            <?php $no = 1;
+                            foreach ($klasement_italia as $posisi) : ?>
+                                <tr class="font-weight-bold warna" style="font-size: 12px;">
+                                    <th scope="row">
+                                        <span class="nomor<?= $no; ?>"><?= $no++; ?></span>
+                                    </th>
+                                    <td class="danger">
                                         <a href="" class="text-decoration-none" data-toggle="modal" data-target="#exampleModal"><?= $posisi['team']['abbreviation'] ?></a>
                                     </td>
                                     <td><?= $posisi['stats'][3]['value'] ?></td>
@@ -38,6 +43,7 @@
                                     <td><?= $posisi['stats'][1]['value'] ?></td>
                                     <td><?= $posisi['stats'][2]['value'] ?></td>
                                     <td><?= $posisi['stats'][6]['value'] ?></td>
+                                    <td><?= $posisi['stats'][9]['displayValue'] ?></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
@@ -53,9 +59,9 @@
             </div>
             <div class="row mt-3">
                 <div class="col-md">
-                    <table class="table text-center text-capitalize" style="font-size: 12px;">
+                    <table class="table text-center text-capitalize table-responsive">
                         <thead>
-                            <tr>
+                            <tr style="font-size: 11px;">
                                 <th scope="col">Position</th>
                                 <th scope="col">Team</th>
                                 <th scope="col">Play</th>
@@ -63,12 +69,17 @@
                                 <th scope="col">Lose</th>
                                 <th scope="col">Draw</th>
                                 <th scope="col">Points</th>
+                                <th scope="col">GD</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($klasement_inggris as $posisi) : ?>
-                                <tr>
-                                    <th scope="row"><?= $posisi['stats'][8]['value'] ?></th>
+                            <?php
+                            $no = 1;
+                            foreach ($klasement_inggris as $posisi) : ?>
+                                <tr class="font-weight-bold warna" style="font-size: 12px;">
+                                    <th scope="row">
+                                        <span class="nomor<?= $no; ?>"><?= $no++; ?></span>
+                                    </th>
                                     <td>
                                         <a href="" class="text-decoration-none" data-toggle="modal" data-target="#exampleModal"><?= $posisi['team']['abbreviation'] ?></a>
                                     </td>
@@ -77,6 +88,7 @@
                                     <td><?= $posisi['stats'][1]['value'] ?></td>
                                     <td><?= $posisi['stats'][2]['value'] ?></td>
                                     <td><?= $posisi['stats'][6]['value'] ?></td>
+                                    <td><?= $posisi['stats'][9]['displayValue'] ?></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
@@ -92,9 +104,9 @@
             </div>
             <div class="row mt-3">
                 <div class="col-md">
-                    <table class="table text-center text-capitalize" style="font-size: 12px;">
+                    <table class="table text-center text-capitalize table-responsive">
                         <thead>
-                            <tr>
+                            <tr style="font-size: 11px;">
                                 <th scope="col">Position</th>
                                 <th scope="col">Team</th>
                                 <th scope="col">Play</th>
@@ -102,12 +114,17 @@
                                 <th scope="col">Lose</th>
                                 <th scope="col">Draw</th>
                                 <th scope="col">Points</th>
+                                <th scope="col">GD</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($klasement_spanyol as $posisi) : ?>
-                                <tr>
-                                    <th scope="row"><?= $posisi['stats'][8]['value'] ?></th>
+                            <?php
+                            $no = 1;
+                            foreach ($klasement_spanyol as $posisi) : ?>
+                                <tr class="font-weight-bold warna" style="font-size: 12px;">
+                                    <th scope="row">
+                                        <span class="nomor<?= $no; ?>"><?= $no++; ?></span>
+                                    </th>
                                     <td>
                                         <a href="" class="text-decoration-none gambar" data-gambar="<?= $posisi['team']['logos'][0]['href'] ?>" data-toggle="modal" data-target="#exampleModal"><?= $posisi['team']['abbreviation'] ?>
                                         </a>
@@ -117,6 +134,7 @@
                                     <td><?= $posisi['stats'][1]['value'] ?></td>
                                     <td><?= $posisi['stats'][2]['value'] ?></td>
                                     <td><?= $posisi['stats'][6]['value'] ?></td>
+                                    <td><?= $posisi['stats'][9]['displayValue'] ?></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
@@ -150,3 +168,26 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    $('document').ready(function() {
+        // var no1 = $('.nomor1').text();
+        // var no2 = $('.nomor2').text();
+        // var no3 = $('.nomor3').text();
+        // var no4 = $('.nomor4').text();
+        // var no5 = $('.nomor5').text();
+        // var no6 = $('.nomor6').text();
+
+        $('.nomor1').addClass('hijau')
+        $('.nomor2').addClass('hijau')
+        $('.nomor3').addClass('hijau')
+        $('.nomor4').addClass('hijau')
+        $('.nomor5').addClass('orange')
+        $('.nomor6').addClass('orange')
+        $('.nomor18').addClass('merah')
+        $('.nomor19').addClass('merah')
+        $('.nomor20').addClass('merah')
+
+    })
+</script>
