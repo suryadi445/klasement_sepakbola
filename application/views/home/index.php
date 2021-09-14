@@ -10,22 +10,22 @@
             <div class="row mt-3">
                 <div class="col-md">
                     <div style="background-image: url('../app_api/assets/image/italia.png');"></div>
-                    <h6 class="text-center text-capitalize"><?= $italia ?></h6>
+                    <h6 class="text-center text-capitalize">
+                        <img src="<?= base_url('assets/image/italia.png') ?>" width="30px">
+                        <?= $italia ?>
+                    </h6>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md">
-                    <table class="table text-center text-capitalize table-responsive">
+                    <table class="table text-capitalize">
                         <thead>
-                            <tr style="font-size: 11px;">
-                                <th scope="col">Position</th>
-                                <th scope="col">Team</th>
-                                <th scope="col">Play</th>
-                                <th scope="col">Win</th>
-                                <th scope="col">Lose</th>
-                                <th scope="col">Draw</th>
-                                <th scope="col">Points</th>
-                                <th scope="col">GD</th>
+                            <tr style="font-size: 12px;">
+                                <th class="text-left" style="width: 30px;">#</th>
+                                <th class="text-left" style="width: 180px;">Team</th>
+                                <th class="text-center" style="width: 10px;">Play</th>
+                                <th class="text-center" style="width: 10px;">Points</th>
+                                <th class="text-center" style="width: 10px;">GD</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,14 +36,14 @@
                                         <span class="nomor<?= $no; ?>"><?= $no++; ?></span>
                                     </th>
                                     <td class="danger">
-                                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#exampleModal"><?= $posisi['team']['abbreviation'] ?></a>
+                                        <a href="" class="text-decoration-none text-left" data-toggle="modal" data-target="#exampleModal">
+                                            <img src="<?= $posisi['team']['logos'][0]['href']; ?>" width="20px">
+                                            <?= $posisi['team']['displayName'] ?>
+                                        </a>
                                     </td>
-                                    <td><?= $posisi['stats'][3]['value'] ?></td>
-                                    <td><?= $posisi['stats'][0]['value'] ?></td>
-                                    <td><?= $posisi['stats'][1]['value'] ?></td>
-                                    <td><?= $posisi['stats'][2]['value'] ?></td>
-                                    <td><?= $posisi['stats'][6]['value'] ?></td>
-                                    <td><?= $posisi['stats'][9]['displayValue'] ?></td>
+                                    <td class="text-center"><?= $posisi['stats'][3]['value'] ?></td>
+                                    <td class="text-center"><?= $posisi['stats'][6]['value'] ?></td>
+                                    <td class="text-center"><?= $posisi['stats'][9]['displayValue'] ?></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
@@ -54,22 +54,22 @@
         <div class="card">
             <div class="row mt-3">
                 <div class="col-md">
-                    <h6 class="text-center text-capitalize"><?= $inggris ?></h6>
+                    <h6 class="text-center text-capitalize">
+                        <img src="<?= base_url('assets/image/inggris.png') ?>" width="30px">
+                        <?= $inggris ?>
+                    </h6>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md">
-                    <table class="table text-center text-capitalize table-responsive">
+                    <table class="table text-capitalize">
                         <thead>
-                            <tr style="font-size: 11px;">
-                                <th scope="col">Position</th>
-                                <th scope="col">Team</th>
-                                <th scope="col">Play</th>
-                                <th scope="col">Win</th>
-                                <th scope="col">Lose</th>
-                                <th scope="col">Draw</th>
-                                <th scope="col">Points</th>
-                                <th scope="col">GD</th>
+                            <tr style="font-size: 12px;">
+                                <th class="text-left" style="width: 30px;">#</th>
+                                <th class="text-left" style="width: 180px;">Team</th>
+                                <th class="text-center" style="width: 10px;">Play</th>
+                                <th class="text-center" style="width: 10px;">Points</th>
+                                <th class="text-center" style="width: 10px;">GD</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -81,14 +81,14 @@
                                         <span class="nomor<?= $no; ?>"><?= $no++; ?></span>
                                     </th>
                                     <td>
-                                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#exampleModal"><?= $posisi['team']['abbreviation'] ?></a>
+                                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#exampleModal">
+                                            <img src="<?= $posisi['team']['logos'][0]['href']; ?>" width="20px">
+                                            <?= $posisi['team']['displayName'] ?>
+                                        </a>
                                     </td>
-                                    <td><?= $posisi['stats'][3]['value'] ?></td>
-                                    <td><?= $posisi['stats'][0]['value'] ?></td>
-                                    <td><?= $posisi['stats'][1]['value'] ?></td>
-                                    <td><?= $posisi['stats'][2]['value'] ?></td>
-                                    <td><?= $posisi['stats'][6]['value'] ?></td>
-                                    <td><?= $posisi['stats'][9]['displayValue'] ?></td>
+                                    <td class="text-center"><?= $posisi['stats'][3]['value'] ?></td>
+                                    <td class="text-center"><?= $posisi['stats'][6]['value'] ?></td>
+                                    <td class="text-center"><?= $posisi['stats'][9]['displayValue'] ?></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
@@ -99,22 +99,22 @@
         <div class="card">
             <div class="row mt-3">
                 <div class="col-md">
-                    <h6 class="text-center text-capitalize"><?= $spanyol ?></h6>
+                    <h6 class="text-center text-capitalize">
+                        <img src="<?= base_url('assets/image/spanyol.png') ?>" width="30px">
+                        <?= $spanyol ?>
+                    </h6>
                 </div>
             </div>
             <div class="row mt-3">
                 <div class="col-md">
-                    <table class="table text-center text-capitalize table-responsive">
+                    <table class="table text-capitalize">
                         <thead>
-                            <tr style="font-size: 11px;">
-                                <th scope="col">Position</th>
-                                <th scope="col">Team</th>
-                                <th scope="col">Play</th>
-                                <th scope="col">Win</th>
-                                <th scope="col">Lose</th>
-                                <th scope="col">Draw</th>
-                                <th scope="col">Points</th>
-                                <th scope="col">GD</th>
+                            <tr style="font-size: 12px;">
+                                <th class="text-left" style="width: 30px;">#</th>
+                                <th class="text-left" style="width: 180px;">Team</th>
+                                <th class="text-center" style="width: 10px;">Play</th>
+                                <th class="text-center" style="width: 10px;">Points</th>
+                                <th class="text-center" style="width: 10px;">GD</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -126,15 +126,14 @@
                                         <span class="nomor<?= $no; ?>"><?= $no++; ?></span>
                                     </th>
                                     <td>
-                                        <a href="" class="text-decoration-none gambar" data-gambar="<?= $posisi['team']['logos'][0]['href'] ?>" data-toggle="modal" data-target="#exampleModal"><?= $posisi['team']['abbreviation'] ?>
+                                        <a href="" class="text-decoration-none gambar" data-gambar="<?= $posisi['team']['logos'][0]['href'] ?>" data-toggle="modal" data-target="#exampleModal">
+                                            <img src="<?= $posisi['team']['logos'][0]['href']; ?>" width="20px">
+                                            <?= $posisi['team']['displayName'] ?>
                                         </a>
                                     </td>
-                                    <td><?= $posisi['stats'][3]['value'] ?></td>
-                                    <td><?= $posisi['stats'][0]['value'] ?></td>
-                                    <td><?= $posisi['stats'][1]['value'] ?></td>
-                                    <td><?= $posisi['stats'][2]['value'] ?></td>
-                                    <td><?= $posisi['stats'][6]['value'] ?></td>
-                                    <td><?= $posisi['stats'][9]['displayValue'] ?></td>
+                                    <td class="text-center"><?= $posisi['stats'][3]['value'] ?></td>
+                                    <td class="text-center"><?= $posisi['stats'][6]['value'] ?></td>
+                                    <td class="text-center"><?= $posisi['stats'][9]['displayValue'] ?></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
