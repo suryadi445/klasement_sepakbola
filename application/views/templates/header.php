@@ -42,14 +42,27 @@
             background-color: #F4F4F4;
         }
 
+        /* keterangan warna untuk zona klasement */
+        .box {
+            float: left;
+            height: 15px;
+            width: 15px;
+            margin-bottom: 5px;
+            border: 1px solid black;
+            clear: both;
+        }
 
-        /* #italia {
-            background-image: url('./assets/image/italia.png');
-        } */
+        .red {
+            background-color: #FF0000;
+        }
 
-        /* .warna {
-            color: red;
-        } */
+        .green {
+            background-color: #79D70F;
+        }
+
+        .oranye {
+            background-color: #EB5E0B;
+        }
     </style>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>

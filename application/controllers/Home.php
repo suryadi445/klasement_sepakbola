@@ -16,15 +16,12 @@ class Home extends CI_Controller
         $data['result']                 = json_decode($data['result'], true);
         $data['italia']                 = $data['result']['data']['abbreviation']; //nama liga
         $data['klasement_italia']       = $data['result']['data']['standings']; //klasement
-        // $data['logo']                   = $data['result']['data']['standings'][0]['team']['logos'][0]['href']; //logo
-
 
         // inggris
         $data['result']                 = call_curl('https://api-football-standings.azharimm.site/leagues/eng.1/standings?season=2021&sort=asc');
         $data['result']                 = json_decode($data['result'], true);
         $data['inggris']                = $data['result']['data']['name'];
         $data['klasement_inggris']      = $data['result']['data']['standings'];
-
 
         // spanyol
         $data['result']                 = call_curl('https://api-football-standings.azharimm.site/leagues/esp.1/standings?season=2021&sort=asc');

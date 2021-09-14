@@ -143,6 +143,25 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class='box green mr-1'></div>
+                    <div class="mt-n1">Champions League</div>
+                </div>
+                <div class="col-md-4">
+                    <div class='box oranye mr-1'></div>
+                    <div class="mt-n1">Europa League</div>
+                </div>
+                <div class="col-md-4">
+                    <div class='box red mr-1'></div>
+                    <div class="mt-n1">Relegated</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
@@ -172,22 +191,17 @@
 
 <script>
     $('document').ready(function() {
-        // var no1 = $('.nomor1').text();
-        // var no2 = $('.nomor2').text();
-        // var no3 = $('.nomor3').text();
-        // var no4 = $('.nomor4').text();
-        // var no5 = $('.nomor5').text();
-        // var no6 = $('.nomor6').text();
-
+        // champions
         $('.nomor1').addClass('hijau')
         $('.nomor2').addClass('hijau')
         $('.nomor3').addClass('hijau')
         $('.nomor4').addClass('hijau')
+        // europa
         $('.nomor5').addClass('orange')
         $('.nomor6').addClass('orange')
+        // degradasi
         $('.nomor18').addClass('merah')
         $('.nomor19').addClass('merah')
         $('.nomor20').addClass('merah')
-
     })
 </script>
