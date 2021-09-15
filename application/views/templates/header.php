@@ -11,62 +11,7 @@
 
     <title><?= $judul ?></title>
 
-    <style>
-        body {
-            background-color: #C8C6C6;
-            font-family: Optima;
-        }
-
-        table {
-            background-color: #082032;
-        }
-
-        th,
-        td {
-            color: #F7F6F2;
-        }
-
-        .hijau {
-            color: #79D70F;
-        }
-
-        .orange {
-            color: #EB5E0B;
-        }
-
-        .merah {
-            color: #FF0000;
-        }
-
-        .card {
-            background-color: #F4F4F4;
-        }
-
-        /* keterangan warna untuk zona klasement */
-        .box {
-            float: left;
-            height: 15px;
-            width: 15px;
-            margin-bottom: 5px;
-            border: 1px solid black;
-            clear: both;
-        }
-
-        .red {
-            background-color: #FF0000;
-        }
-
-        .green {
-            background-color: #79D70F;
-        }
-
-        .oranye {
-            background-color: #EB5E0B;
-        }
-    </style>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
 
 </head>
 
